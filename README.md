@@ -1,4 +1,7 @@
 [![Codespaces Prebuilds](https://github.com/ycbq999/functions-from-zero/actions/workflows/codespaces/create_codespaces_prebuilds/badge.svg)](https://github.com/ycbq999/functions-from-zero/actions/workflows/codespaces/create_codespaces_prebuilds)
+
+[![CI](https://github.com/ycbq999/functions-from-zero/actions/workflows/main.yml/badge.svg)](https://github.com/ycbq999/functions-from-zero/actions/workflows/main.yml)
+
 # functions-from-zero
 A repo to learn functions
 
@@ -11,7 +14,7 @@ A repo to learn functions
     virtualenv ~/.venv 
     vim ~/.bashrc
     source ~/venv/bin/activate
-    
+
 ## Step2: Get interactive debugging working
 
 * Use IPython and ipdb 
