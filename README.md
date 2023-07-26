@@ -26,3 +26,6 @@ A repo to learn functions
     print(x + y)
 
     ```
+
+## Step3: Build a library and use it
+
