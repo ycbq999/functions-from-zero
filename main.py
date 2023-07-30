@@ -38,9 +38,7 @@ async def travel(city1: City, city2: City, speed: float = 60.0):
     Return back the travel time between two cities"""
 
     hours = travel_time(city1.name, city2.name, speed)
-    return {
-        "travel_time": f"{int(hours)} hours and {int((hours - int(hours)) * 60)} minutes"
-    }
+    return {"travel_time": f"{int(hours)} hours"}
 
 
 # build a post method to get the distance between two cities

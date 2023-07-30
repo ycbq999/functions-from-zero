@@ -60,7 +60,7 @@ def travel_time(city1, city2, speed=60):
     Estimate the travel time between two cities by car
     Assume the default speed is 60 miles per hour
     """
-    return (
+    return round(
         distance_between_two_points(get_coordinates(city1), get_coordinates(city2))
         / speed
     )
