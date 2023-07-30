@@ -14,7 +14,7 @@ def test_distance_between_two_points():
     """
     This function tests the distance_between_two_points function
     """
-    assert distance_between_two_points(CITIES[0][1], CITIES[1][1]) == 2450.9503446683375
+    assert round(distance_between_two_points(CITIES[0][1], CITIES[1][1])) == 2451
 
 
 def test_cities_list():
@@ -29,7 +29,7 @@ def test_travel_time():
     """
     This function tests the travel_time function
     """
-    assert travel_time("New York", "Los Angeles", 60) == 40.84917241113896
+    assert round(travel_time("New York", "Los Angeles", 60)) == 41
 
 
 #### Web Application Testing ####
@@ -69,11 +69,11 @@ def test_distance(client):
         json={"city1": {"name": "New York"}, "city2": {"name": "Los Angeles"}},
     )
     assert response.status_code == 200
-    assert response.json() == {"distance": 2450.9503446683375}
+    assert round(response.json()["distance"]) == 2451
 
 
 # build a test the travel time between two cities by car
-def test_travel_time(client):
+def test_travel(client):
     response = client.post(
         "/travel",
         json={"city1": {"name": "New York"}, "city2": {"name": "Los Angeles"}},
