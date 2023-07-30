@@ -5,7 +5,7 @@ from mylib.logistics import (
     distance_between_two_points,
     cities_list,
     get_coordinates,
-    travel_time
+    travel_time,
 )
 
 
@@ -31,7 +31,7 @@ async def cities():
     return {"cities": cities_list()}
 
 
-#build a post method to calculate the travel time between two cities by car
+# build a post method to calculate the travel time between two cities by car
 @app.post("/travel")
 async def travel(city1: City, city2: City, speed: float = 60.0):
     """Estimate the travel time between two cities by car with POST HTTP Method
@@ -40,11 +40,10 @@ async def travel(city1: City, city2: City, speed: float = 60.0):
     hours = travel_time(city1.name, city2.name, speed)
     return {
         "travel_time": f"{int(hours)} hours and {int((hours - int(hours)) * 60)} minutes"
-        
     }
 
 
-#build a post method to get the distance between two cities
+# build a post method to get the distance between two cities
 @app.post("/distance")
 async def distance(city1: City, city2: City):
     """Calculate the distance between two cities with POST HTTP Method
